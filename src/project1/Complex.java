@@ -24,12 +24,19 @@ public class Complex {
 	}
 	
 	public Complex add (Complex x, Complex y) {
-		return new Complex(x.getReal()+y.getReal(),x.getImaginary()+y.getImaginary());
+		real = x.getReal()+y.getReal();
+		imaginary = x.getImaginary()+y.getImaginary();
+		Complex sum = new Complex(real, imaginary);
+		return sum;
+		
 	}
 
 	public Complex subtract (Complex x, Complex y) {
+		real = x.getReal()-y.getReal();
+		imaginary = x.getImaginary()-y.getImaginary();
+		Complex sub = new Complex(real,imaginary);
 		// TODO subtract the complex number y from the complex number x  
-		return new Complex(x.getReal()-y.getReal(),x.getImaginary()-y.getImaginary());
+		return sub;
 	}
 	
 	public void display () {
